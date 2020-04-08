@@ -1,32 +1,17 @@
 # Chapter 2 
 Based on [Spark: The DefinitiveGuide](https://github.com/databricks/Spark-The-Definitive-Guide) book.
 
-temp
-
-```python
-s = "Python syntax highlighting"
-print(s)
-```
-
-## reading csv file, infering schema and header
-```python
-flightData2015 = spark\
-.read\
-.option(" inferSchema" , " true" )\
-.option(" header" , " true" )\
-.csv(" /data/flight- data/csv/2015- summary. csv" )
-```
-
+## Making range
 ```python
 myRange = spark.range(1000).toDF("number")
 ```
 
-# COMMAND ----------
+## condition on 
 ```python
 divisBy2 = myRange.where("number % 2 = 0")
 ```
 
-# COMMAND ----------
+# Proper explanation
 ```python
 flightData2015 = spark\
   .read\
@@ -34,12 +19,12 @@ flightData2015 = spark\
   .option("header", "true")\
   .csv("/data/flight-data/csv/2015-summary.csv")
 ```
-# COMMAND ----------
+## Proper explanation
 ```python
 flightData2015.createOrReplaceTempView("flight_data_2015")
 ```
 
-# COMMAND ----------
+## Proper explanation
 ```python
 sqlWay = spark.sql("""
 SELECT DEST_COUNTRY_NAME, count(1)
@@ -55,14 +40,14 @@ sqlWay.explain()
 dataFrameWay.explain()
 ```
 
-# COMMAND ----------
+## Proper explanation
 ```python
 from pyspark.sql.functions import max
 
 flightData2015.select(max("count")).take(1)
 ```
 
-# COMMAND ----------
+## Proper explanation
 ```python
 maxSql = spark.sql("""
 SELECT DEST_COUNTRY_NAME, sum(count) as destination_total
@@ -75,7 +60,7 @@ LIMIT 5
 maxSql.show()
 ```
 
-# COMMAND ----------
+## Proper explanation
 ```python
 from pyspark.sql.functions import desc
 
@@ -88,7 +73,7 @@ flightData2015\
   .show()
 ```
 
-# COMMAND ----------
+## Proper explanation
 ```python
 flightData2015\
   .groupBy("DEST_COUNTRY_NAME")\
