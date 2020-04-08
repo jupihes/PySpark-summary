@@ -1,5 +1,5 @@
 # Chapter 2 
-Based on [Spark: The DefinitiveGuide]: https://github.com/databricks/Spark-The-Definitive-Guide book.
+Based on [Spark: The DefinitiveGuide](https://github.com/databricks/Spark-The-Definitive-Guide) book.
 
 temp
 
