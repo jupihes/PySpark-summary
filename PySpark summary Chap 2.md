@@ -11,7 +11,7 @@ myRange = spark.range(1000).toDF("number")
 divisBy2 = myRange.where("number % 2 = 0")
 ```
 
-# Proper explanation
+## Proper explanation
 ```python
 flightData2015 = spark\
   .read\
