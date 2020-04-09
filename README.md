@@ -1,4 +1,4 @@
-# PySpark-summary from "Spark: The Definitive Guide"
+# PySpark summary based on __"Spark: The Definitive Guide"__
 
 Here  we tried to gather python codes  [Spark: The Definitive Guide](http://shop.oreilly.com/product/0636920034957.do) by Bill Chambers and Matei Zaharia plus adding short explanation. 
 Github link for book codes:
