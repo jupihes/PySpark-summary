@@ -1,23 +1,4 @@
 
-code/Structured_APIs-Chapter_10_Spark_SQL.py
-```
-## Proper explanation
-```python
-
-spark.read.json("/data/flight-data/json/2015-summary.json")\
-  .createOrReplaceTempView("some_sql_view") # DF => SQL
-
-spark.sql("""
-SELECT DEST_COUNTRY_NAME, sum(count)
-FROM some_sql_view GROUP BY DEST_COUNTRY_NAME
-""")\
-  .where("DEST_COUNTRY_NAME like 'S%'").where("`sum(count)` > 10")\
-  .count() # SQL => DF
-
-
-```
-## Proper explanation
-```python
 
 code/Advanced_Analytics_and_Machine_Learning-Chapter_24_Advanced_Analytics_and_Machine_Learning.py
 ```
