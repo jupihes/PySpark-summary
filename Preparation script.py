@@ -1,16 +1,18 @@
 from os import chdir
 import re
 
-def readnumlines(file, num=2):
-    f = iter(file)
-    while True:
-        lines = [None] * num
-        for i in range(num):
-            try:
-                lines[i] = next(file)
-            except StopIteration: # EOF or not enough lines available
-                return
-        yield lines
+############################
+#def readnumlines(file, num=2):
+#    f = iter(file)
+#    while True:
+#        lines = [None] * num
+#       for i in range(num):
+#            try:
+#                lines[i] = next(file)
+#            except StopIteration: # EOF or not enough lines available
+#                return
+#        yield lines
+############################
 
 chdir(r'Apache Spark\Spark cheatsheets')
 
