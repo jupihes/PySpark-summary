@@ -11,7 +11,7 @@ https://github.com/databricks/Spark-The-Definitive-Guide
 
 __Following Chapters are avaliable for now__
 
-- Chapter 2:	A Gentle Introduction to Spark
+- Chapter 2:	[A Gentle Introduction to Spark](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%202.md)
 
 - Chapter 3:	A_Tour_of_Sparks_Toolset
 
