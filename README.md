@@ -15,18 +15,18 @@ __Following Chapters are avaliable for now__
 
 - Chapter 3:	[A_Tour_of_Sparks_Toolset](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%203.md)
 
-- Chapter 4:	Structured_API_Overview
+- Chapter 4:	[Structured_API_Overview](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%204.md)
 
-- Chapter 5:	Basic_Structured_Operations
+- Chapter 5:	[Basic_Structured_Operations](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%205.md)
 
-- Chapter 6:	Working_with_Different_Types_of_Data
+- Chapter 6:	[Working_with_Different_Types_of_Data](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%206.md)
 
-- Chapter 7:	Aggregations
+- Chapter 7:	[Aggregations](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%207.md)
 
-- Chapter 8:	Joins
+- Chapter 8:	[Joins](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%208.md)
 
-- Chapter 9:	Data_Sources
+- Chapter 9:	[Data_Sources](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%209.md)
 
-- Chapter 10:	Spark_SQL
+- Chapter 10:	[Spark_SQL](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%2010.md)
 
-- Chapter 24:	Advanced_Analytics_and_Machine_Learning
+- Chapter 24:	[Advanced_Analytics_and_Machine_Learning](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%2024.md)
