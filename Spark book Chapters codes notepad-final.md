@@ -1,19 +1,3 @@
-book name : Spark The Definitive Guide
-Github link for book codes:
-https://github.com/databricks/Spark-The-Definitive-Guide
-
-Chapter2:	A Gentle Introduction to Spark
-Chapter3:	A_Tour_of_Sparks_Toolset
-Chapter4:	Structured_API_Overview
-Chapter5:	Basic_Structured_Operations
-Chapter6:	Working_with_Different_Types_of_Data
-Chapter7:	Aggregations
-Chapter8:	Joins
-Chapter9:	Data_Sources
-Chapter10:	Spark_SQL
-Chapter24:	Advanced_Analytics_and_Machine_Learning
-
-
 code/A_Gentle_Introduction_to_Spark-Chapter_2_A_Gentle_Introduction_to_Spark.py
 
 ## Proper explanation
