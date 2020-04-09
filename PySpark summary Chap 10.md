@@ -11,6 +11,3 @@ FROM some_sql_view GROUP BY DEST_COUNTRY_NAME
 """)\
   .where("DEST_COUNTRY_NAME like 'S%'").where("`sum(count)` > 10")\
   .count() # SQL => DF
-
-
-```
