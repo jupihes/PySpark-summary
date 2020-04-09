@@ -11,22 +11,22 @@ https://github.com/databricks/Spark-The-Definitive-Guide
 
 __Following Chapters are avaliable for now__
 
-- Chapter2:	A Gentle Introduction to Spark
+- Chapter 2:	A Gentle Introduction to Spark
 
-- Chapter3:	A_Tour_of_Sparks_Toolset
+- Chapter 3:	A_Tour_of_Sparks_Toolset
 
-- Chapter4:	Structured_API_Overview
+- Chapter 4:	Structured_API_Overview
 
-Chapter5:	Basic_Structured_Operations
+- Chapter 5:	Basic_Structured_Operations
 
-Chapter6:	Working_with_Different_Types_of_Data
+- Chapter 6:	Working_with_Different_Types_of_Data
 
-Chapter7:	Aggregations
+- Chapter 7:	Aggregations
 
-Chapter8:	Joins
+- Chapter 8:	Joins
 
-Chapter9:	Data_Sources
+- Chapter 9:	Data_Sources
 
-Chapter10:	Spark_SQL
+- Chapter 10:	Spark_SQL
 
-Chapter24:	Advanced_Analytics_and_Machine_Learning
+- Chapter 24:	Advanced_Analytics_and_Machine_Learning
