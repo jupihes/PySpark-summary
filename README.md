@@ -13,7 +13,7 @@ __Following Chapters are avaliable for now__
 
 - Chapter 2:	[A Gentle Introduction to Spark](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%202.md)
 
-- Chapter 3:	A_Tour_of_Sparks_Toolset
+- Chapter 3:	[A_Tour_of_Sparks_Toolset](https://github.com/jupihes/PySpark-summary/blob/master/PySpark%20summary%20Chap%203.md)
 
 - Chapter 4:	Structured_API_Overview
 
