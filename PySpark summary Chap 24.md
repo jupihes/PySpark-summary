@@ -1,7 +1,3 @@
-
-
-code/Advanced_Analytics_and_Machine_Learning-Chapter_24_Advanced_Analytics_and_Machine_Learning.py
-```
 ## Proper explanation
 ```python
 
@@ -127,12 +123,9 @@ tvs = TrainValidationSplit()\
   .setEstimator(pipeline)\
   .setEvaluator(evaluator)
 
-
 ```
 ## Proper explanation
 ```python
 
 tvsFitted = tvs.fit(train)
-
-
-# COMMAND ----------
+```
