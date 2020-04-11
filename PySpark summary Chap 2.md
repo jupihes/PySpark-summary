@@ -6,12 +6,14 @@ Based on [Spark: The DefinitiveGuide](https://github.com/databricks/Spark-The-De
 myRange = spark.range(1000).toDF("number")
 ```
 
-## condition on 
+## Apply condition  
 ```python
 divisBy2 = myRange.where("number % 2 = 0")
 ```
 
-## Proper explanation
+## Read CSV 
+
+infereing schema and force to consider header
 ```python
 flightData2015 = spark\
   .read\
@@ -24,7 +26,7 @@ flightData2015 = spark\
 flightData2015.createOrReplaceTempView("flight_data_2015")
 ```
 
-## Proper explanation
+## Comparing SQL way with dataframeway to query the data 
 ```python
 sqlWay = spark.sql("""
 SELECT DEST_COUNTRY_NAME, count(1)
@@ -40,12 +42,17 @@ sqlWay.explain()
 dataFrameWay.explain()
 ```
 
-## Proper explanation
+## import function from library
+
+Import from 'pyspark.sql.functions' : sample for max function
 ```python
 from pyspark.sql.functions import max
 
 flightData2015.select(max("count")).take(1)
 ```
+
+
+## add whole list = extra
 
 ## Proper explanation
 ```python
@@ -73,7 +80,9 @@ flightData2015\
   .show()
 ```
 
-## Proper explanation
+## Sample of Groupby and Sort
+
+column renamed 
 ```python
 flightData2015\
   .groupBy("DEST_COUNTRY_NAME")\
