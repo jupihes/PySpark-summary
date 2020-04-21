@@ -1,4 +1,4 @@
-## Proper explanation
+## Read a Static Data Set and Create a DF
 ```python
 
 staticDataFrame = spark.read.format("csv")\
@@ -11,7 +11,7 @@ staticSchema = staticDataFrame.schema
 
 
 ```
-## Proper explanation
+## Pyspark SQL functions
 ```python
 
 from pyspark.sql.functions import window, column, desc, col
@@ -28,7 +28,7 @@ staticDataFrame\
 
 
 ```
-## Proper explanation
+## Streaming: ReadStream with MaxFilePerTrigger option
 ```python
 
 streamingDataFrame = spark.readStream\
@@ -40,7 +40,7 @@ streamingDataFrame = spark.readStream\
 
 
 ```
-## Proper explanation
+## Perform a summation in Streaming process
 ```python
 
 purchaseByCustomerPerHour = streamingDataFrame\
@@ -54,7 +54,7 @@ purchaseByCustomerPerHour = streamingDataFrame\
 
 
 ```
-## Proper explanation
+## Write Stream
 ```python
 
 purchaseByCustomerPerHour.writeStream\
@@ -65,7 +65,7 @@ purchaseByCustomerPerHour.writeStream\
 
 
 ```
-## Proper explanation
+## SQL Selecting in Spark
 ```python
 
 spark.sql("""
@@ -77,7 +77,7 @@ spark.sql("""
 
 
 ```
-## Proper explanation
+## Manipulate Date Data
 ```python
 
 from pyspark.sql.functions import date_format, col
@@ -88,7 +88,7 @@ preppedDataFrame = staticDataFrame\
 
 
 ```
-## Proper explanation
+## Split Data to Training and Test sets
 ```python
 
 trainDataFrame = preppedDataFrame\
@@ -98,7 +98,7 @@ testDataFrame = preppedDataFrame\
 
 
 ```
-## Proper explanation
+## StringIndexer: Automate General Transformations
 ```python
 
 from pyspark.ml.feature import StringIndexer
@@ -108,7 +108,7 @@ indexer = StringIndexer()\
 
 
 ```
-## Proper explanation
+## Encode days to numerical values with OneHotEncoder
 ```python
 
 from pyspark.ml.feature import OneHotEncoder
@@ -118,7 +118,7 @@ encoder = OneHotEncoder()\
 
 
 ```
-## Proper explanation
+## Assemble Set of Columns to a Vector
 ```python
 
 from pyspark.ml.feature import VectorAssembler
@@ -129,7 +129,7 @@ vectorAssembler = VectorAssembler()\
 
 
 ```
-## Proper explanation
+## Set Key Features into a Pipeline
 ```python
 
 from pyspark.ml import Pipeline
@@ -139,21 +139,21 @@ transformationPipeline = Pipeline()\
 
 
 ```
-## Proper explanation
+## Index the Distinct Values
 ```python
 
 fittedPipeline = transformationPipeline.fit(trainDataFrame)
 
 
 ```
-## Proper explanation
+## Use Fitted Pipeline to Transform All of Data in a Consistent and Repeatable Way
 ```python
 
 transformedTraining = fittedPipeline.transform(trainDataFrame)
 
 
 ```
-## Proper explanation
+## Training the Model
 ```python
 
 from pyspark.ml.clustering import KMeans
@@ -163,21 +163,21 @@ kmeans = KMeans()\
 
 
 ```
-## Proper explanation
+## Kmeans Model
 ```python
 
 kmModel = kmeans.fit(transformedTraining)
 
 
 ```
-## Proper explanation
+## Compute the Cost
 ```python
 
 transformedTest = fittedPipeline.transform(testDataFrame)
-
+kmModel.computeCost(transformedTest)
 
 ```
-## Proper explanation
+## Parallelize Some Simple Numbers and Create a DataFrame
 ```python
 
 from pyspark.sql import Row
