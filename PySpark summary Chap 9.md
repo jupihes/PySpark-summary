@@ -1,5 +1,5 @@
 
-## Proper explanation
+## Reading CSV Files Options
 ```python
 
 csvFile = spark.read.format("csv")\
@@ -10,7 +10,7 @@ csvFile = spark.read.format("csv")\
 
 
 ```
-## Proper explanation
+## Take CSV File and Write it as a TSV File
 ```python
 
 csvFile.write.format("csv").mode("overwrite").option("sep", "\t")\
@@ -18,7 +18,7 @@ csvFile.write.format("csv").mode("overwrite").option("sep", "\t")\
 
 
 ```
-## Proper explanation
+## Reading JSON Files
 ```python
 
 spark.read.format("json").option("mode", "FAILFAST")\
@@ -27,14 +27,14 @@ spark.read.format("json").option("mode", "FAILFAST")\
 
 
 ```
-## Proper explanation
+## Writing JSON Files
 ```python
 
 csvFile.write.format("json").mode("overwrite").save("/tmp/my-json-file.json")
 
 
 ```
-## Proper explanation
+## Reading Parquet Files
 ```python
 
 spark.read.format("parquet")\
@@ -42,7 +42,7 @@ spark.read.format("parquet")\
 
 
 ```
-## Proper explanation
+## Writing Parquet Files
 ```python
 
 csvFile.write.format("parquet").mode("overwrite")\
@@ -50,21 +50,21 @@ csvFile.write.format("parquet").mode("overwrite")\
 
 
 ```
-## Proper explanation
+## Reading ORC Files
 ```python
 
 spark.read.format("orc").load("/data/flight-data/orc/2010-summary.orc").show(5)
 
 
 ```
-## Proper explanation
+## Writing ORC Files
 ```python
 
 csvFile.write.format("orc").mode("overwrite").save("/tmp/my-json-file.orc")
 
 
 ```
-## Proper explanation
+## Reading from SQL Databases
 ```python
 
 driver = "org.sqlite.JDBC"
@@ -74,7 +74,7 @@ tablename = "flight_info"
 
 
 ```
-## Proper explanation
+## Read the DataFrame from the SQL Table
 ```python
 
 dbDataFrame = spark.read.format("jdbc").option("url", url)\
@@ -82,7 +82,7 @@ dbDataFrame = spark.read.format("jdbc").option("url", url)\
 
 
 ```
-## Proper explanation
+## Read Using PostgreSQL 
 ```python
 
 pgDF = spark.read.format("jdbc")\
@@ -93,14 +93,14 @@ pgDF = spark.read.format("jdbc")\
 
 
 ```
-## Proper explanation
+## Query Pushdown with PushedFilters
 ```python
 
 dbDataFrame.filter("DEST_COUNTRY_NAME in ('Anguilla', 'Sweden')").explain()
 
 
 ```
-## Proper explanation
+## Pass an Entire Query into SQL, Return Results as a DataFrame
 ```python
 
 pushdownQuery = """(SELECT DISTINCT(DEST_COUNTRY_NAME) FROM flight_info)
@@ -111,7 +111,7 @@ dbDataFrame = spark.read.format("jdbc")\
 
 
 ```
-## Proper explanation
+## Reading from Databases in Parallel
 ```python
 
 dbDataFrame = spark.read.format("jdbc")\
@@ -120,7 +120,7 @@ dbDataFrame = spark.read.format("jdbc")\
 
 
 ```
-## Proper explanation
+## Specifying a List of Predicates While Creating the Data Source
 ```python
 
 props = {"driver":"org.sqlite.JDBC"}
@@ -133,7 +133,7 @@ spark.read.jdbc(url,tablename,predicates=predicates,properties=props)\
 
 
 ```
-## Proper explanation
+## Set of Predicates that Will Result in Duplicate Rows
 ```python
 
 props = {"driver":"org.sqlite.JDBC"}
@@ -144,7 +144,7 @@ spark.read.jdbc(url, tablename, predicates=predicates, properties=props).count()
 
 
 ```
-## Proper explanation
+## Partitioning Based on a Sliding Window
 ```python
 
 colName = "count"
@@ -154,7 +154,7 @@ numPartitions = 10
 
 
 ```
-## Proper explanation
+## Distribute the Intervals Equally from Low to High during Partitioning 
 ```python
 
 spark.read.jdbc(url, tablename, column=colName, properties=props,
@@ -163,7 +163,7 @@ spark.read.jdbc(url, tablename, column=colName, properties=props,
 
 
 ```
-## Proper explanation
+## Writing to SQL Database
 ```python
 
 newPath = "jdbc:sqlite://tmp/my-sqlite.db"
@@ -171,28 +171,28 @@ csvFile.write.jdbc(newPath, tablename, mode="overwrite", properties=props)
 
 
 ```
-## Proper explanation
+## Output of Writed SQL 
 ```python
 
 spark.read.jdbc(newPath, tablename, properties=props).count() # 255
 
 
 ```
-## Proper explanation
+## Append a New Table to An Existing table
 ```python
 
 csvFile.write.jdbc(newPath, tablename, mode="append", properties=props)
 
 
 ```
-## Proper explanation
+## Increase Count After Append
 ```python
 
 spark.read.jdbc(newPath, tablename, properties=props).count() # 765
 
 
 ```
-## Proper explanation
+## Writing Text Files
 ```python
 
 
@@ -201,7 +201,7 @@ csvFile.limit(10).select("DEST_COUNTRY_NAME", "count")\
 
 
 ```
-## Proper explanation
+## Partitioning to Control What Data is Stored (And Where)
 ```python
 
 csvFile.limit(10).write.mode("overwrite").partitionBy("DEST_COUNTRY_NAME")\
