@@ -1,4 +1,4 @@
-## Proper explanation
+## Read from json
 ```python
 
 df = spark.read.format("json").load("/data/flight-data/json/2015-summary.json")
