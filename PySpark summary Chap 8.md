@@ -1,5 +1,5 @@
 
-## Proper explanation
+## Create Simple Datasets
 ```python
 
 person = spark.createDataFrame([
@@ -20,28 +20,28 @@ sparkStatus = spark.createDataFrame([
 
 
 ```
-## Proper explanation
+## Inner Join
 ```python
 
 joinExpression = person["graduate_program"] == graduateProgram['id']
 
 
 ```
-## Proper explanation
+## Inner Join (Keys that dont exist in both DataFrames, will not show in the resulting DataFrame)
 ```python
 
 wrongJoinExpression = person["name"] == graduateProgram["school"]
 
 
 ```
-## Proper explanation
+## Join Type
 ```python
 
 joinType = "inner"
 
 
 ```
-## Proper explanation
+## Left Semi Joins
 ```python
 
 gradProgram2 = graduateProgram.union(spark.createDataFrame([
@@ -51,7 +51,7 @@ gradProgram2.createOrReplaceTempView("gradProgram2")
 
 
 ```
-## Proper explanation
+## Joins on Complex Types
 ```python
 
 from pyspark.sql.functions import expr
