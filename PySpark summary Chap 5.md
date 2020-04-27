@@ -2,8 +2,12 @@
 ```python
 
 df = spark.read.format("json").load("/data/flight-data/json/2015-summary.json")
-
-
+```
+##
+DataFame will have columns, and we use a schema to define them. 
+Llook at the schema on our current DataFrame:
+```python
+df. printSchema()
 ```
 ## Proper explanation
 ```python
